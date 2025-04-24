@@ -29,11 +29,11 @@ export function Hero() {
           </div>
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0 relative">
-          <div className="absolute top-0 right-0 w-full h-full bg-[#6A0000] rounded-lg -z-10"></div>
+          <div className="absolute top-0 right-0 w-full h-full bg-[#450100] rounded-[52%_0%_21%_0%_/_75%_25%_0%_25%] -z-10"></div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6">
             <img
-              className="aspect-[3/2] bg-gray-50 object-cover lg:aspect-[4/3] lg:h-[400px] xl:aspect-[16/9]"
-              src="img/delivery_man_with_boxes.jpeg"
+              className="aspect-[3/2] object-fill lg:aspect-[4/3] lg:h-[450px] xl:aspect-[16/9]"
+              src="img/delivery_man_with_boxes.png"
               alt=""
               width={500}
               height={400}
