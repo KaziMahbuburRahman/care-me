@@ -1,61 +1,38 @@
 import Link from "next/link";
 
+// Category data
+const categories = [
+  "Sell Sarees Online",
+  "Sell Tshirts Online", // Corrected typo
+  "Sell Watches Online",
+  "Sell Jewellery Online",
+  "Sell Shirts Online",
+  "Sell Electronics Online",
+  "Sell Clothes Online",
+  "Sell Socks Online",
+];
+
 export function Categories() {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container">
-        <h2 className="text-2xl font-bold text-center mb-10">
+    // Section styling: white background, padding
+    <section className="py-16 bg-card">
+      {/* Container */}
+      <div className="container mx-auto">
+        {/* Title */}
+        <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12">
           Popular Categories to Sell Online
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Sarees Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell T-shirts Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Watches Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Clothes Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Jewellery Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Shirts Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Electronics Online</p>
-          </Link>
-          <Link
-            href="#"
-            className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
-          >
-            <p className="text-gray-700">Sell Socks Online</p>
-          </Link>
+        {/* Grid for category links - 2 columns on small, 3 on medium+ */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-6 max-w-3xl mx-auto">
+          {categories.map((category, index) => (
+            <Link
+              key={index}
+              href="#" // Keep placeholder href
+              className="text-muted-foreground hover:text-primary hover:underline text-center sm:text-left text-base"
+            >
+              {category}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
