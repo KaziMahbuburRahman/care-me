@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function Testimonials() {
   return (
     <section className="py-12 bg-gray-50">
@@ -11,12 +9,15 @@ export function Testimonials() {
           {/* Testimonial 1 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Supplier testimonial"
-                fill
-                className="object-cover"
-              />
+              <div className="relative h-[200px] w-[300px]">
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="img/2_man_standing_with_hand_in_chest.jpeg"
+                  alt=""
+                  width={300}
+                  height={200}
+                />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
                   <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
@@ -37,12 +38,15 @@ export function Testimonials() {
           {/* Testimonial 2 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Supplier testimonial"
-                fill
-                className="object-cover"
-              />
+              <div className="relative h-[200px] w-[300px]">
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="img/female_with_computer.jpeg"
+                  alt=""
+                  width={300}
+                  height={200}
+                />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
                   <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
@@ -63,12 +67,15 @@ export function Testimonials() {
           {/* Testimonial 3 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=200&width=300"
-                alt="Supplier testimonial"
-                fill
-                className="object-cover"
-              />
+              <div className="relative h-[200px] w-[300px]">
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="img/Three_man_with_laptop.jpeg"
+                  alt=""
+                  width={300}
+                  height={200}
+                />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
                   <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
