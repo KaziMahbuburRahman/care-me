@@ -1,99 +1,70 @@
+import { Play } from "lucide-react";
+
+// Placeholder data (replace with actual data or props)
+const testimonials = [
+  {
+    name: "Amit and Rajat Jain",
+    location: "Smartees, Tiruppur",
+    quote:
+      "Our business has grown beyond our imagination, getting upto 10,000 orders consistently during sale days. We are now constantly bringing new products thanks to Meesho's insights.",
+    image: "img/2_man_standing_with_hand_in_chest.jpeg", // Replace with actual image path
+  },
+  {
+    name: "Suman",
+    location: "Keshav Fashion, Hisar",
+    quote:
+      "Our business has grown beyond our imagination, getting upto 10,000 orders consistently during sale days. We are now constantly bringing new products thanks to Meesho's insights.",
+    image: "img/Three_man_with_laptop.jpeg", // Replace with actual image path
+  },
+  {
+    name: "Mohit Rathi",
+    location: "Meira Jewellery, Ahmedabad",
+    quote:
+      "Our business has grown beyond our imagination, getting upto 10,000 orders consistently during sale days. We are now constantly bringing new products thanks to Meesho's insights.",
+    image: "img/female_with_computer.jpeg", // Replace with actual image path
+  },
+];
+
 export function Testimonials() {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container">
-        <h2 className="text-2xl font-bold text-center mb-10">
+    <section className="py-16 bg-card">
+      <div className="container mx-auto">
+        <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12">
           Experiences suppliers love to talk about
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Testimonial 1 */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-            <div className="relative h-48 overflow-hidden">
-              <div className="relative h-[200px] w-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-card rounded-lg overflow-hidden border border-border shadow-sm"
+            >
+              <div className="relative h-52 w-full overflow-hidden">
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="img/2_man_standing_with_hand_in_chest.jpeg"
-                  alt=""
-                  width={300}
-                  height={200}
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={400}
+                  height={300}
                 />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-colors duration-200">
+                  <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer">
+                    <Play className="w-6 h-6 text-primary-foreground fill-primary-foreground ml-1" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="p-4">
-              <h3 className="font-semibold">Amit and Rajat Jain</h3>
-              <p className="text-sm text-gray-500">Saree seller, Delhi</p>
-              <p className="text-xs text-gray-600 mt-2">
-                Our business has grown beyond our imagination, selling over
-                10,000 orders consistently during peak season, all thanks to
-                Meesho's insights.
-              </p>
-            </div>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-            <div className="relative h-48 overflow-hidden">
-              <div className="relative h-[200px] w-[300px]">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src="img/female_with_computer.jpeg"
-                  alt=""
-                  width={300}
-                  height={200}
-                />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
-                </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-lg text-foreground">
+                  {testimonial.name}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.location}
+                </p>
+                <p className="text-sm text-muted-foreground mt-3">
+                  {testimonial.quote}
+                </p>
               </div>
             </div>
-            <div className="p-4">
-              <h3 className="font-semibold">Suman</h3>
-              <p className="text-sm text-gray-500">Western Fashion, Hisar</p>
-              <p className="text-xs text-gray-600 mt-2">
-                Our business has grown beyond our imagination, selling over
-                10,000 orders consistently during peak season, all thanks to
-                Meesho's insights.
-              </p>
-            </div>
-          </div>
-
-          {/* Testimonial 3 */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-            <div className="relative h-48 overflow-hidden">
-              <div className="relative h-[200px] w-[300px]">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src="img/Three_man_with_laptop.jpeg"
-                  alt=""
-                  width={300}
-                  height={200}
-                />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#6A0000]/80 flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4">
-              <h3 className="font-semibold">Mohit Rathi</h3>
-              <p className="text-sm text-gray-500">
-                Metal Jewellery, Ahmedabad
-              </p>
-              <p className="text-xs text-gray-600 mt-2">
-                Our business has grown beyond our imagination, selling over
-                10,000 orders consistently during peak season, all thanks to
-                Meesho's insights.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
