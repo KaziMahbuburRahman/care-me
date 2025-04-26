@@ -29,7 +29,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section className="mt-20 mb-10 mx-5 md:mx-0">
-      <h2 className="text-[#450000] font-bold text-[34px] text-center">
+      <h2 className="text-primary font-bold text-[34px] text-center">
         Experiences suppliers love to talk about
       </h2>
       <div className="flex flex-wrap items-center justify-center gap-[10px] mt-5">
@@ -44,12 +44,16 @@ export function Testimonials() {
                 src={testimonial.image}
                 alt={testimonial.name}
               />
-              <div className="w-14 h-14 absolute -bottom-7 left-7 flex items-center justify-center bg-[#450000] border-4 border-[#FF8001] rounded-full cursor-pointer">
-                <Play className="w-5 h-5 text-white fill-white ml-1" />
+
+              <div className="relative">
+                <div className="w-14 h-14 absolute -bottom-7 left-7 flex items-center justify-center bg-primary rounded-full cursor-pointer">
+                  <Play className="w-5 h-5 text-white fill-white ml-1" />
+                </div>
+                <div className="w-14 h-14 absolute -bottom-7 left-7 border-4 border-[#FF8001] rounded-full animate-pulse"></div>
               </div>
             </div>
             <div className="mt-18">
-              <h3 className="text-[#450000] font-bold text-[20px]">
+              <h3 className="text-primary font-bold text-[20px]">
                 {testimonial.name}
               </h3>
               <p className="my-3 text-[16px] text-gray-600">
