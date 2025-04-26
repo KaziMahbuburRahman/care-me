@@ -22,7 +22,7 @@ export function Support() {
                 width={20}
                 height={20}
               />
-            </div>
+             </div>
             <div className="text-center md:text-start">
               <p className="text-[#000]">You can reach out to</p>
               <p className="text-gray-500">support@caremebd.com</p>
