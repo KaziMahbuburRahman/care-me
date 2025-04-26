@@ -15,11 +15,7 @@ export function Hero() {
         <p className="my-5 font-normal text-lg leading-[35px]">
           Become a Care Me seller and grow your business across Bangladesh{" "}
           <br />
-          <Badge
-          className="text-lg mx-1"
-          >
-            New!
-          </Badge>
+          <Badge className="text-lg mx-1">New!</Badge>
           Don't have a GSTIN? You can still sell on Meesho. Know more
         </p>
         <div className="bg-[#FFF]  inline-flex xl:w-[500px] w-3/4 md:w-[350px] rounded-l-lg">
