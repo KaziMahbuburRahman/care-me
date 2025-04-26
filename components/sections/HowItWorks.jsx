@@ -37,7 +37,7 @@ export function HowItWorks() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <h2 className="text-[#450000] font-extrabold text-[32px] text-center mb-5">
+        <h2 className="text-primary font-extrabold text-[32px] text-center mb-5">
           How it works
         </h2>
 
@@ -46,16 +46,16 @@ export function HowItWorks() {
             {steps.map((step, index) => (
               <div key={step.number} className="flex flex-col items-start">
                 <div className="flex items-center justify-center gap-5">
-                  <div className="text-white text-[30px] font-bold bg-[#450000] px-6 rounded-full py-[10px]">
+                  <div className="text-white text-[30px] font-bold bg-primary px-6 rounded-full py-[10px]">
                     {step.number}
                   </div>
                   {index < steps.length - 1 && (
-                    <span className="h-[1px] w-[100px] bg-[#450000]"></span>
+                    <span className="h-[1px] w-[100px] bg-primary"></span>
                   )}
                 </div>
 
                 <div className="mt-5 flex flex-col gap-2">
-                  <h4 className="text-[#450000] font-semibold text-[18px]">
+                  <h4 className="text-primary font-semibold text-[18px] whitespace-nowrap">
                     {step.title}
                   </h4>
                   <p className="text-[14px]">{step.description}</p>
