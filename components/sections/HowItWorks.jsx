@@ -4,8 +4,11 @@ export function HowItWorks() {
     {
       number: 1,
       title: "Create Account",
-      description:
-        "All you need is:\n• GSTIN (for GST sellers)\n• or Enrolment ID / UIN (for non-GST sellers)\n• Bank Account",
+      description: "All you need is:",
+      listItems: [
+        "GSTIN (for GST sellers) or Enrolment ID / UIN for non GST sellers",
+        "Bank Account",
+      ],
     },
     {
       number: 2,
@@ -27,43 +30,45 @@ export function HowItWorks() {
       number: 5,
       title: "Receive Payments",
       description:
-        "Payments are deposited directly to your bank account following a 7-day payment cycle from order delivery.",
+        "Payments are deposited directly to your bank account following a 7 day payment cycle from order delivery.",
     },
   ];
 
   return (
-    // Section styling: light gray background, padding
-    <section className="py-16 bg-background">
-      {/* Container */}
+    <section className="py-16">
       <div className="container mx-auto">
-        {/* Title */}
-        <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-16">
+        <h2 className="text-[#450000] font-extrabold text-[32px] text-center mb-5">
           How it works
         </h2>
-        {/* Steps container with relative positioning for the line */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Connecting line (visible on md screens and up) */}
-          <div className="hidden md:block absolute top-5 left-0 right-0 h-1 bg-border -translate-y-1/2 z-0"></div>
 
-          {/* Grid for steps */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-12">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                className="relative z-10 flex flex-col items-center text-center"
-              >
-                {/* Numbered circle */}
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mb-4">
-                  {step.number}
+        <div className="bg-[#F4F8FE] min-h-[250px] mt-5 rounded-[5px] max-w-[1040px] mx-auto">
+          <div className="flex gap-4 py-10 px-10 flex-wrap xl:flex-nowrap">
+            {steps.map((step, index) => (
+              <div key={step.number} className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-5">
+                  <div className="text-white text-[30px] font-bold bg-[#450000] px-6 rounded-full py-[10px]">
+                    {step.number}
+                  </div>
+                  {index < steps.length - 1 && (
+                    <span className="h-[1px] w-[100px] bg-[#450000]"></span>
+                  )}
                 </div>
-                {/* Step title */}
-                <h3 className="font-semibold text-lg text-foreground mb-2">
-                  {step.title}
-                </h3>
-                {/* Step description - using whitespace-pre-line to respect newlines */}
-                <p className="text-sm text-muted-foreground whitespace-pre-line">
-                  {step.description}
-                </p>
+
+                <div className="mt-5 flex flex-col gap-2">
+                  <h4 className="text-[#450000] font-semibold text-[18px]">
+                    {step.title}
+                  </h4>
+                  <p className="text-[14px]">{step.description}</p>
+                  {step.listItems && (
+                    <ul className="ml-5 text-[14px]">
+                      {step.listItems.map((item, i) => (
+                        <li key={i} className="list-disc">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             ))}
           </div>
