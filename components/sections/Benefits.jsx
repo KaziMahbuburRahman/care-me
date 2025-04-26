@@ -1,10 +1,4 @@
-import {
-  CheckCircle2,
-  DollarSign,
-  Package,
-  Percent,
-  TrendingUp,
-} from "lucide-react";
+import { CheckCircle2, DollarSign, Package, Percent, TrendingUp } from "lucide-react";
 
 export function Benefits() {
   return (
