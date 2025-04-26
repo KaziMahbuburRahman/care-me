@@ -51,7 +51,7 @@
   --card-foreground: oklch(0.15 0.01 240);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 240);
-  --primary: oklch(0.35 0.15 20);
+  --primary: #450100;
   --primary-foreground: oklch(0.98 0.01 20);
   --secondary: oklch(0.95 0.01 240);
   --secondary-foreground: oklch(0.3 0.01 240);
@@ -113,6 +113,7 @@
 }
 
 @layer base {
+
   * {
     @apply border-border outline-ring/50;
   }

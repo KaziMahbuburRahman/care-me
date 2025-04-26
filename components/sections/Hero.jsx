@@ -5,12 +5,15 @@ import { Input } from "@/components/ui/input"; // Import Input component
 export function Hero() {
   return (
     // Use bg-background for the section
-    <section className="relative bg- overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Full-width content */}
-      <div className="w-full pl-20 flex flex-col lg:flex-row items-center py-16 lg:py-24">
+      <div className="w-full pl-20 flex flex-col lg:flex-row items-center relative">
+        {/* Background color for the main section */}
+        <div className="absolute inset-0 bg-[#E9E3E3] -z-20"></div>
+
         {/* Text content area */}
         <div className="w-full lg:w-1/2 space-y-5 z-10 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+          <h1 className="text-4xl sm:text-5xl lg:text-4xl font-bold leading-tight text-foreground">
             Sell online to 14 Cr+ customers at <br />
             <span className="text-primary">0% Commission</span>
           </h1>
@@ -18,14 +21,15 @@ export function Hero() {
             <p className="text-muted-foreground text-lg">
               Become a Care Me seller and grow your business across Bangladesh
             </p>
+            {/* show the badge in newline */}
+          </div>
+          <p className="text-muted-foreground text-sm">
             <Badge
               variant="default"
               className="bg-primary text-primary-foreground h-5"
             >
               New
-            </Badge>
-          </div>
-          <p className="text-muted-foreground text-sm">
+            </Badge>{" "}
             Don't have a GSTIN? You can still sell on Meesho. Know more
           </p>
           {/* Input group */}
@@ -46,7 +50,8 @@ export function Hero() {
 
         {/* Image area */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0 relative">
-          <div className="absolute top-0 right-0 w-full h-full bg-[#450100] rounded-[52%_0%_21%_0%_/_75%_25%_0%_25%] -z-10"></div>
+          <div className="absolute top-0 right-0 w-full h-full bg-primary rounded-[60%_0%_21%_0%_/_75%_25%_0%_25%] -z-10"></div>
+          {/* 60% 25% 25% 25% / 63% 0% 0% 0%; */}
           <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6">
             <img
               className="aspect-[3/2] object-fill lg:aspect-[4/3] lg:h-[450px] xl:aspect-[16/9]"
