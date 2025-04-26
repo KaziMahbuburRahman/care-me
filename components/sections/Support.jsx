@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Support() {
   return (
-    <section className="bg-[#F4F8FE] flex items-center justify-center md:h-[260px] md:px-4">
+    <section className="bg-[#F4F8FE] flex items-center justify-center md:h-[260px] md:px-4 mb-20">
       <div className="max-w-[1040px] flex md:flex-row flex-col items-center justify-center py-10 md:py-0 gap-5">
         <h2 className="text-primary font-extrabold text-[32px] md:text-start text-center md:w-1/2">
           Care Me Supplier Support <br />
